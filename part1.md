@@ -18,7 +18,7 @@ I'm interested in LSTM for four reasons:
 
 3. LSTM is essentially deep learning where the depth is created by unrolling the network through time.
 
-4, LSTM is probably one of the main precursors to [RAM (Reasoning, Attention, Memory) networks](http://www.thespermwhale.com/jaseweston/ram/), and understanding / using LSTM can serve as a good base to apply RAM to target datasets. RAM is growing quickly..
+4. LSTM is probably one of the main precursors to [RAM (Reasoning, Attention, Memory) networks](http://www.thespermwhale.com/jaseweston/ram/), and understanding / using LSTM can serve as a good base to apply RAM to target datasets. RAM is growing quickly..
 
 # Motivation
 
@@ -32,14 +32,17 @@ Most of the data sets used in deep learning revolve around image and text corpus
 
 # RNN Framework selection criteria
 
+What matters when picking / scoring an ML framework to use? Some criteria simply relate to ease of use and tooling support, while others speak directly to the ML ability of the framework. For me, the criteria are:
+
 * Good Language support (debugger, editor)
 * Speed of development
 * Active community
 * Good performance (training speed, data set scalability, accuracy / precision)
 * Near transparent migration from CPU to GPU training
-* Ability to modify the framework easily
+* Reproducible results
+* Ability to modify the framework / template code easily
 
-The Torch + RNN layer we delve into here is by no means perfect, but it scores highly enough on these criteria to make it my choice. Realistically, it pays to have good familiarity with multiple frameworks. TensorFlow may also morph into some kind of generic back-end like gcc or clang where other ML frameworks output TF models for training. There's no reason to do that until TF demonstrates something superior - speed, ability to harness a cluster of nodes..
+The Torch + RNN layer we delve into here is by no means perfect, but it scores highly enough on these criteria to make it my current choice. Realistically, it pays to have good familiarity with multiple frameworks. TensorFlow (TF) for example may morph into some kind of generic back-end like gcc or clang where other ML frameworks output TF models for training. So there's no reason for me to move to TF until it demonstrates something superior - speed, ability to harness a cluster of nodes. And when it does, then I'll use it as well as Torch / RNN.
 
 ##Other candidates
 
@@ -93,7 +96,7 @@ Ok, so our minimum requirements for the core code at this point are as follows:
 
 Without further ado, here is the code to do exactly that! There's not really much point in building it up slowly / line by line - hopefully the inline comments will make it clear exactly what each non-obvious line is doing. Obvious lines are self-documenting :)
 
-(Thanks to [https://github.com/nicholas-leonard](@nicholas-leonard) for help in debugging this code as I wrote it)
+(Thanks to [@nicholas-leonard](https://github.com/nicholas-leonard) for help in debugging this code as I wrote it)
 
 require 'rnn'
 
