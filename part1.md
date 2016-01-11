@@ -48,11 +48,11 @@ The Torch + RNN layer we delve into here is by no means perfect, but it scores h
 
 There are multiple frameworks available that "do" LSTM, for example:
 
-[Theano](http://deeplearning.net/software/theano/)
-[Caffe](http://caffe.berkeleyvision.org/)
-[Keras](http://keras.io/)
-[Brainstorm](https://github.com/IDSIA/brainstorm)
-[TensorFlow](https://www.tensorflow.org/)
+* [Theano](http://deeplearning.net/software/theano/)
+* [Caffe](http://caffe.berkeleyvision.org/)
+* [Keras](http://keras.io/)
+* [Brainstorm](https://github.com/IDSIA/brainstorm)
+* [TensorFlow](https://www.tensorflow.org/)
 
 I don't mind having to learn Lua or Python whereas a lot of researchers prefer the Python frameworks. I find the compile time overhead of Theano to be quite onerous so I prefer the interpreted nature of Torch7. Brainstorm is pretty new still and so is TensorFlow. I've played with Keras and it looks good, although I don't know that it lets me control enough directly.
 
